@@ -1,71 +1,26 @@
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.saplingPine, function (sprite, location) {
-    info.setScore(2)
-    tiles.setTilemap(tiles.createTilemap(hex`1000100001010101010101010101010101010101010001010200000000000001030000010100010101010101010300010101000101000000000000000001000003010001010100010101010100000100000000010100000000010303010001010100000101000101000100000000000001010001010003030001000001010100030000010100030300010100000000000300030101000303000000010100010101000301010001010101000001000103010001010100000103030100010001030100000101010001000100000000010101010001010300010001000101010100000000010103000000010000000000000101010101010101010101010101010101010101`, img`
-        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-        2 . 2 2 . . . . . . . 2 . . . 2 
-        2 . 2 2 2 2 2 2 2 . . 2 2 2 . 2 
-        2 . . . . . . . . 2 . . . 2 . 2 
-        2 2 . 2 2 2 2 2 . . 2 . . . . 2 
-        2 . . . . 2 . . 2 . 2 2 2 . . 2 
-        2 . 2 2 . 2 . . . . . . 2 2 . 2 
-        2 . . . . 2 . . 2 2 2 . . . . 2 
-        2 . . . . 2 2 . . . . . . . . 2 
-        2 . . . . . . 2 2 . 2 2 2 . . 2 
-        2 . 2 2 2 2 . . 2 . 2 . 2 . 2 2 
-        2 . . 2 . . 2 . 2 . 2 . 2 . . 2 
-        2 2 . 2 . 2 . . . . 2 2 2 2 . 2 
-        2 . . 2 . 2 . 2 2 2 2 . . . . 2 
-        2 . . . . 2 . . . . . . 2 2 2 2 
-        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-        `, [myTiles.transparency16,sprites.dungeon.hazardWater,sprites.castle.shrub,sprites.dungeon.hazardLava1], TileScale.Sixteen))
+    info.changeScoreBy(10)
+    tiles.setTilemap(tilemap`level3`)
+    mySprite.setPosition(29, 28)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.castle.shrub, function (sprite, location) {
+    info.changeScoreBy(10)
+    tiles.setTilemap(tilemap`level4`)
     mySprite.setPosition(29, 28)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.hazardLava1, function (sprite, location) {
     info.changeLifeBy(-1)
+    info.changeScoreBy(-5)
     mySprite.setPosition(29, 28)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.saplingOak, function (sprite, location) {
-    info.setScore(1)
-    tiles.setTilemap(tiles.createTilemap(hex`1000100001010101010101010101010101010101010000000000000001000000000202010101010101000100000001000101010101010000000000000100000000000001010200010100010101010101010100010102000101000000000000000100000101020001010102020201010001000101010200000001020202000000000002010102000000010202020001010101010101020001000000000000000000000101010000010000000101010102020000010100000102020202020202010101000101000201020101010101010100000001010002010100000000000001000201010100000000000002020200010000030101010101010101010101010101010101`, img`
-        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-        2 . . . . . . . 2 . . . . . . 2 
-        2 2 2 2 2 . 2 . . . 2 . 2 2 2 2 
-        2 2 . . . . . . 2 . . . . . . 2 
-        2 . . 2 2 . 2 2 2 2 2 2 2 2 . 2 
-        2 . . 2 2 . . . . . . . 2 . . 2 
-        2 . . 2 2 2 . . . 2 2 . 2 . 2 2 
-        2 . . . . 2 . . . . . . . . . 2 
-        2 . . . . 2 . . . . 2 2 2 2 2 2 
-        2 . . 2 . . . . . . . . . . 2 2 
-        2 . . 2 . . . 2 2 2 2 . . . . 2 
-        2 . . 2 . . . . . . . 2 2 2 . 2 
-        2 . . 2 . 2 2 2 2 2 2 2 . . . 2 
-        2 . . 2 2 . . . . . . 2 . . 2 2 
-        2 . . . . . . . . . . 2 . . . 2 
-        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-        `, [myTiles.transparency16,sprites.dungeon.hazardWater,sprites.dungeon.hazardLava1,sprites.castle.saplingPine], TileScale.Sixteen))
+    tiles.setTilemap(tilemap`level1`)
     mySprite.setPosition(29, 28)
+    info.changeScoreBy(10)
 })
 let mySprite: Sprite = null
 scene.setBackgroundColor(15)
-tiles.setTilemap(tiles.createTilemap(hex`1000100000000000000000000000000000000000000000000000000000000000000000000202020202020202020202020000020202000000000101010000000000000101020000000000000000000202020202020200020202020102020200000000020302000001010202020202000202000200020000000002000000020000000002000202020200020002000202020002000000000000000000020000010200020001000002020202020202000202000200020200020000000000020000000002000000000200020202000202020202020200000200000202020002020202000000000000000001010200000000000000020202020202020202020201010101010101`, img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    2 2 2 2 2 2 2 2 2 2 2 2 . . 2 2 
-    2 . . . . . . . . . . . . . . . 
-    2 . . . . . . . . . 2 2 2 2 2 2 
-    2 . 2 2 2 2 . 2 2 2 . . . . 2 . 
-    2 . . . . 2 2 2 2 2 . 2 2 . 2 . 
-    2 . . . . 2 . . . 2 . . . . 2 . 
-    2 2 2 2 . 2 . 2 . 2 2 2 . 2 . . 
-    . . . . . . . 2 . . . 2 . 2 . . 
-    . . 2 2 2 2 2 2 2 . 2 2 . 2 . 2 
-    2 . 2 . . . . . 2 . . . . 2 . . 
-    . . 2 . 2 2 2 . 2 2 2 2 2 2 2 . 
-    . 2 . . 2 2 2 . 2 2 2 2 . . . . 
-    . . . . . . 2 . . . . . . . 2 2 
-    2 2 2 2 2 2 2 2 2 . . . . . . . 
-    `, [myTiles.transparency16,sprites.dungeon.hazardLava1,sprites.dungeon.hazardWater,sprites.castle.saplingOak], TileScale.Sixteen))
+tiles.setTilemap(tilemap`level2`)
 mySprite = sprites.create(img`
     ........................
     .....ffff...............
@@ -96,3 +51,4 @@ controller.moveSprite(mySprite)
 mySprite.setPosition(29, 28)
 scene.cameraFollowSprite(mySprite)
 info.setLife(3)
+info.setScore(0)
