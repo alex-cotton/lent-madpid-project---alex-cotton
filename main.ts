@@ -8,6 +8,11 @@ scene.onOverlapTile(SpriteKind.Player, sprites.castle.shrub, function (sprite, l
     tiles.setTilemap(tilemap`level4`)
     mySprite.setPosition(29, 28)
 })
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
+    info.changeScoreBy(10)
+    tiles.setTilemap(tilemap`level6`)
+    mySprite.setPosition(29, 28)
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.hazardLava1, function (sprite, location) {
     info.changeLifeBy(-1)
     info.changeScoreBy(-5)
@@ -51,4 +56,4 @@ controller.moveSprite(mySprite)
 mySprite.setPosition(29, 28)
 scene.cameraFollowSprite(mySprite)
 info.setLife(3)
-info.setScore(0)
+info.setScore(10)
