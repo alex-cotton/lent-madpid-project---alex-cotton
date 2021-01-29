@@ -13,16 +13,21 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sp
     tiles.setTilemap(tilemap`level6`)
     mySprite.setPosition(29, 28)
 })
-scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.hazardLava1, function (sprite, location) {
+statusbars.onZero(StatusBarKind.Health, function (status) {
     info.changeLifeBy(-1)
     info.changeScoreBy(-5)
     mySprite.setPosition(29, 28)
+    statusbar.value = 100
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.hazardLava1, function (sprite, location) {
+    statusbar.value += -1
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.saplingOak, function (sprite, location) {
     tiles.setTilemap(tilemap`level1`)
     mySprite.setPosition(29, 28)
     info.changeScoreBy(10)
 })
+let statusbar: StatusBarSprite = null
 let mySprite: Sprite = null
 scene.setBackgroundColor(15)
 tiles.setTilemap(tilemap`level2`)
@@ -57,3 +62,5 @@ mySprite.setPosition(29, 28)
 scene.cameraFollowSprite(mySprite)
 info.setLife(3)
 info.setScore(10)
+statusbar = statusbars.create(20, 4, StatusBarKind.Health)
+statusbar.attachToSprite(mySprite)
