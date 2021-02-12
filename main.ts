@@ -27,6 +27,15 @@ scene.onOverlapTile(SpriteKind.Player, sprites.castle.saplingOak, function (spri
     mySprite.setPosition(29, 28)
     info.changeScoreBy(10)
 })
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleRedCrystal, function (sprite, location) {
+    statusbar.value = -1
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestOpen, function (sprite, location) {
+    info.changeScoreBy(10)
+    tiles.setTilemap(tilemap`level9`)
+    info.setLife(4)
+    mySprite.setPosition(29, 28)
+})
 let statusbar: StatusBarSprite = null
 let mySprite: Sprite = null
 scene.setBackgroundColor(15)

@@ -4,6 +4,8 @@ namespace myTiles {
     export const transparency16 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
     export const tile1 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile2 = image.ofBuffer(hex``);
 
     helpers._registerFactory("tilemap", function(name: string) {
         switch(helpers.stringTrim(name)) {
@@ -216,6 +218,25 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `, [myTiles.transparency16,myTiles.tile1], TileScale.Sixteen);
+            case "level9":
+            case "level9":return tiles.createTilemap(hex`10001000020808080808080808080808080808030700000000000000000000000000000507000600060606000606060606060005070000000000060000000000000600050706000606000606060006060006000507000000060000000000000609060005070006000600060606060006060600050709000006000009000600000006000507060006060600060006000600060005070600060000000600000006000600050706000600060606060606060006000507060006000600000000000000060005070000060006000606060606060600050700060600060000000900000006060507000900000600060000000600000a0504060606060606060606060606060601`, img`
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 . . . . . . . . . . . . . . 2 
+2 . 2 . 2 2 2 . 2 2 2 2 2 2 . 2 
+2 . . . . . 2 . . . . . . 2 . 2 
+2 2 . 2 2 . 2 2 2 . 2 2 . 2 . 2 
+2 . . . 2 . . . . . . 2 . 2 . 2 
+2 . 2 . 2 . 2 2 2 2 . 2 2 2 . 2 
+2 . . . 2 . . . . 2 . . . 2 . 2 
+2 2 . 2 2 2 . 2 . 2 . 2 . 2 . 2 
+2 2 . 2 . . . 2 . . . 2 . 2 . 2 
+2 2 . 2 . 2 2 2 2 2 2 2 . 2 . 2 
+2 2 . 2 . 2 . . . . . . . 2 . 2 
+2 . . 2 . 2 . 2 2 2 2 2 2 2 . 2 
+2 . 2 2 . 2 . . . 2 . . . 2 2 2 
+2 . . . . 2 . 2 . . . 2 . . . 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`, [myTiles.transparency16,sprites.dungeon.purpleInnerSouthEast,sprites.dungeon.purpleInnerNorthWest,sprites.dungeon.purpleInnerNorthEast,sprites.dungeon.purpleInnerSouthWest,sprites.dungeon.purpleOuterWest1,sprites.dungeon.purpleOuterNorth1,sprites.dungeon.purpleOuterEast0,sprites.dungeon.purpleOuterSouth0,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.collectibleBlueCrystal], TileScale.Sixteen);
         }
         return null;
     })
@@ -225,6 +246,8 @@ namespace myTiles {
             case "transparency16":return transparency16;
             case "tile":
             case "tile1":return tile1;
+            case "tile0":
+            case "tile2":return tile2;
         }
         return null;
     })

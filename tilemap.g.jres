@@ -10,6 +10,12 @@
         "tilemapTile": true,
         "displayName": "tile"
     },
+    "tile2": {
+        "data": "hwQQABAAAAAAAAAAAAAAACAiIAAAAAAAAAIgIgICAAAgIiAAACIiAgAAAAAAAgAAICIgIgIAAAAAAAACAAIiAiAAICICAAAAICIAAAAiIgIgACAgAgAAAgAAAAAAAAAAAAAgAgIiIgIAACAgAgICAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "tile0"
+    },
     "level": {
         "id": "level",
         "mimeType": "application/mkcd-tilemap",
@@ -137,6 +143,25 @@
             "myTiles.tile1"
         ],
         "displayName": "level8"
+    },
+    "level9": {
+        "id": "level9",
+        "mimeType": "application/mkcd-tilemap",
+        "data": "MTAxMDAwMTAwMDAyMDgwODA4MDgwODA4MDgwODA4MDgwODA4MDgwODAzMDcwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDUwNzAwMDYwMDA2MDYwNjAwMDYwNjA2MDYwNjA2MDAwNTA3MDAwMDAwMDAwMDA2MDAwMDAwMDAwMDAwMDYwMDA1MDcwNjAwMDYwNjAwMDYwNjA2MDAwNjA2MDAwNjAwMDUwNzAwMDAwMDA2MDAwMDAwMDAwMDAwMDYwOTA2MDAwNTA3MDAwNjAwMDYwMDA2MDYwNjA2MDAwNjA2MDYwMDA1MDcwOTAwMDAwNjAwMDAwOTAwMDYwMDAwMDAwNjAwMDUwNzA2MDAwNjA2MDYwMDA2MDAwNjAwMDYwMDA2MDAwNTA3MDYwMDA2MDAwMDAwMDYwMDAwMDAwNjAwMDYwMDA1MDcwNjAwMDYwMDA2MDYwNjA2MDYwNjA2MDAwNjAwMDUwNzA2MDAwNjAwMDYwMDAwMDAwMDAwMDAwMDA2MDAwNTA3MDAwMDA2MDAwNjAwMDYwNjA2MDYwNjA2MDYwMDA1MDcwMDA2MDYwMDA2MDAwMDAwMDkwMDAwMDAwNjA2MDUwNzAwMDkwMDAwMDYwMDA2MDAwMDAwMDYwMDAwMGEwNTA0MDYwNjA2MDYwNjA2MDYwNjA2MDYwNjA2MDYwNjAxMjIyMjIyMjIyMjIyMjIyMjAyMDAwMDAwMDAwMDAwMjAwMjAyMjIwMjIyMjIyMjIwMDIwMDAwMDIwMDAwMjAyMDIyMjAwMjIyMDIyMjIwMjAwMjAwMDIwMDAwMjAyMDIwMDIwMjAyMjIyMjIwMjIyMDAyMDAwMjAwMjAwMDIwMjAyMjIwMjIyMDIwMjAyMDIwMjIyMDAwMjAwMDIwMjAyMDIyMjAyMDIyMjIyMjIwMjAyMjIwMjAwMDAwMDAyMDIwMDIyMDIwMjAyMjIyMjIyMDAyMjIyMDAwMjAwMDIwMjIwMjAwMjAyMDAwMjAwMDIwMjIyMjIyMjIyMjIyMjIyMg==",
+        "tileset": [
+            "myTiles.transparency16",
+            "sprites.dungeon.purpleInnerSouthEast",
+            "sprites.dungeon.purpleInnerNorthWest",
+            "sprites.dungeon.purpleInnerNorthEast",
+            "sprites.dungeon.purpleInnerSouthWest",
+            "sprites.dungeon.purpleOuterWest1",
+            "sprites.dungeon.purpleOuterNorth1",
+            "sprites.dungeon.purpleOuterEast0",
+            "sprites.dungeon.purpleOuterSouth0",
+            "sprites.dungeon.collectibleRedCrystal",
+            "sprites.dungeon.collectibleBlueCrystal"
+        ],
+        "displayName": "level9"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",
