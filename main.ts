@@ -8,6 +8,10 @@ scene.onOverlapTile(SpriteKind.Player, sprites.castle.shrub, function (sprite, l
     tiles.setTilemap(tilemap`level4`)
     mySprite.setPosition(29, 28)
 })
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleBlueCrystal, function (sprite, location) {
+    tiles.setTilemap(tilemap`level10`)
+    info.changeScoreBy(10)
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
     info.changeScoreBy(10)
     tiles.setTilemap(tilemap`level6`)
